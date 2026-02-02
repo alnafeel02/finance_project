@@ -21,7 +21,7 @@ const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(express.static('uploads'));
-app.use(cors());
+app.use(cors({origin:'https://finance-project-green.vercel.app'}));
 
 // Routes
 app.use('/api/auth', authRoutes);
